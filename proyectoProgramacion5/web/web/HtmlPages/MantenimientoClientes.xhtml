@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Registro clientes</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <link rel="stylesheet" href="../css/bootstrap.min.css" />
+        <!--Mi Hoja de Estilos Personalizada-->
+        <link rel="stylesheet" type="text/css" href="../css/miCSS.css" />
+    </h:head>
+    <h:body style="background-image: url(../Imagenes/imgPan.jpg); background-size: auto;">
+        <h:form>
+            <!--menu-->
+            <div class="container-fluid" >
+                <header class="col-xs-12" >
+                    <nav class="navbar navbar-inverse" id="containerMenu">
+                        <div class="container-fluid" >
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+
+                                <ul class="nav navbar-nav">
+                                    <li><a href="Principal.xhtml">Inicio</a></li>
+                                     <!--<li><h:commandLink action="Principal.xhtml" value="Principal"></h:commandLink></li>-->
+                                </ul>
+                            </div>
+                            <div class="collapse navbar-collapse" id="myNavbar">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="Productos.xhtml">Productos</a></li>
+                                    <li><a href="MantenimientoClientes.xhtml">Registrar cliente</a></li>
+                                    <li><a href="Ingreso.xhtml">Ingreso</a></li>
+                                    <li><a>Ayuda</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </header>
+            </div>
+            <!--Main-->
+            <div class="container" id="MainDiv" style="margin-bottom: 30px; width: 50%;" >
+                <center>
+                    <section class="main" >
+
+                        <h3>Registro clientes</h3>
+                        <div class="table-responsive">
+                            <table border="0" class="table-responsive">
+                                <tr>
+                                    <td> <label>Identificación:</label></td>
+                                    <td><h:inputText class="input-sm" value="#{beanRegistroClientes.indentificacion}"></h:inputText></td>
+                                </tr>
+                                <tr>
+                                    <td><label>Nombre:</label></td>
+                                    <td><h:inputText class="input-sm" value="#{beanRegistroClientes.nombre}"></h:inputText></td>
+                                </tr>
+                                <tr>
+                                    <td><label>Primer apellido:</label></td>
+                                    <td><h:inputText class="input-sm" value="#{beanRegistroClientes.primerApellido}"></h:inputText></td>
+                                </tr>
+                                <tr>
+                                    <td><label>Segundo apellido:</label></td>
+                                    <td><h:inputText class="input-sm" value="#{beanRegistroClientes.segundoApellido}"></h:inputText></td>
+                                </tr>
+                                <tr>
+                                    <td><label>Teléfono:</label></td>
+                                    <td><h:inputText class="input-sm" value="#{beanRegistroClientes.telefono}"></h:inputText></td>
+                                </tr>
+                                <tr>
+                                    <td><label>Horario entrega</label></td>
+                                    <td><h:inputText class="input-sm" value="#{beanRegistroClientes.hora}"></h:inputText></td>
+                                </tr>
+                            </table>
+                            <table>
+                                <tr>
+                                    <td><label>Dirección:</label></td>
+                                    <td>
+                                        <h:selectOneMenu label="Provincia" onchange="submit()" id="pro">
+                                            <f:selectItem itemValue="San jose"></f:selectItem>
+                                            <f:selectItem itemValue="Alajuela"></f:selectItem>
+                                            <f:selectItem itemValue="Heredia"></f:selectItem>
+                                        </h:selectOneMenu>
+                                    </td>
+                                    <td>
+                                        <h:selectOneMenu label="Canton" onchange="submit()" id="canton">
+                                            <!--<f:selectItems id="cantonItems" class="input-sm"></f:selectItems>-->
+                                            <f:selectItem itemValue="San Ramon"></f:selectItem>
+                                            <f:selectItem itemValue="Belen"></f:selectItem>
+                                            <f:selectItem itemValue="Palmares"></f:selectItem>
+                                        </h:selectOneMenu>
+                                    </td>
+                                    <td>
+                                        <h:selectOneMenu label="Distrito" onchange="submit()" id="distrito">
+                                            <!--<f:selectItems class="input-sm"></f:selectItems>-->
+                                            <f:selectItem itemValue="Piedades Norte"></f:selectItem>
+                                            <f:selectItem itemValue="La Paz"></f:selectItem>
+                                            <f:selectItem itemValue="Piedades sur"></f:selectItem>
+                                        </h:selectOneMenu>
+                                    </td>
+                                    <td><label>Otras señas:</label><h:inputText class="input-sm"></h:inputText></td>
+                                </tr>
+                                <tr>
+                                    <td><label>Otra direccion:</label></td>
+                                    <td>
+                                        <h:selectOneMenu label="Provincia" onchange="submit()" id="pro2">
+                                            <f:selectItem itemValue="San jose"></f:selectItem>
+                                            <f:selectItem itemValue="Alajuela"></f:selectItem>
+                                            <f:selectItem itemValue="Heredia"></f:selectItem>
+                                        </h:selectOneMenu>
+                                    </td>
+                                    <td>
+                                        <h:selectOneMenu label="Canton" onchange="submit()" id="canton2">
+                                            <!--<f:selectItems id="cantonItems" class="input-sm"></f:selectItems>-->
+                                            <f:selectItem itemValue="San Ramon"></f:selectItem>
+                                            <f:selectItem itemValue="Belen"></f:selectItem>
+                                            <f:selectItem itemValue="Palmares"></f:selectItem>
+                                        </h:selectOneMenu>
+                                    </td>
+                                    <td>
+                                        <h:selectOneMenu label="Distrito" onchange="submit()" id="distrito3">
+                                            <!--<f:selectItems class="input-sm"></f:selectItems>-->
+                                            <f:selectItem itemValue="Piedades Norte"></f:selectItem>
+                                            <f:selectItem itemValue="La Paz"></f:selectItem>
+                                            <f:selectItem itemValue="Piedades sur"></f:selectItem>
+                                        </h:selectOneMenu>
+                                    </td>
+
+                                    <td><label>Otras señas:</label><h:inputText class="input-sm"></h:inputText></td>
+                                </tr>
+                            </table>
+                        </div><br></br>
+
+                        <h:commandButton value="Nuevo" class="btn btn-primary" action="#{beanRegistroClientes.limpiarRegistroClientes()}"></h:commandButton>
+                        <h:commandButton value="Guardar" style="margin-left :5px;" class="btn btn-primary" action="#{beanRegistroClientes.validarDatos()}"></h:commandButton>
+                        <h:commandButton value="Buscar" style="margin-left :5px;" class="btn btn-primary"></h:commandButton>
+                        <h:commandButton value="Editar" style="margin-left :5px;" class="btn btn-primary"></h:commandButton>
+                        <!--<<h:commandButton value="Aceptar" style="margin-left :5px;" class="btn btn-success"></h:commandButton>-->
+                        <h:commandButton value="Salir" style="margin-left :5px;" class="btn btn-danger" action="Ingreso.xhtml"></h:commandButton>
+
+
+                    </section>
+                    <h:outputLabel value="#{beanRegistroClientes.mensage}" style="color: black"></h:outputLabel>
+                </center>
+            </div>
+
+            <!--Pie de Página-->
+            <div class="container-fluid" style="margin-bottom:5px" >
+                <footer class="col-xs-12">
+                    <div id="pie">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <br />
+                                <p>
+                                    <a href="Principal.xhtml">Inicio  |</a>
+                                    <a>Contactenos</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <p>Copyright &#169; Proyecto progra 5 (UTN 2020)</p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+
+            <script src="../js/jquery-3.2.1.min.js"></script>
+            <script src="../js/bootstrap.min.js"></script>
+        </h:form>
+    </h:body>
+</html>
+
