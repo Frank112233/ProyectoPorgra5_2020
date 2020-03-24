@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Pagina de inicio</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <link rel="stylesheet" href="../css/bootstrap.min.css" />
+        <!--Mi Hoja de Estilos Personalizada-->
+        <link rel="stylesheet" type="text/css" href="../css/miCSS.css" />
+    </h:head>
+    <h:body style="background-image: url(../Imagenes/imgFondo.jpg); background-size: auto;">
+        <h:form>
+            <!--menu-->
+            <div class="container-fluid" >
+                <header class="col-xs-12" >
+                    <nav class="navbar navbar-inverse" id="containerMenu">
+                        <div class="container-fluid" >
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+
+                                <ul class="nav navbar-nav">
+                                    <li><a href="Principal.xhtml">Inicio</a></li>
+                                </ul>
+                            </div>
+                            <div class="collapse navbar-collapse" id="myNavbar">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="Productos.xhtml">Productos</a></li>
+                                    <li><a href="MantenimientoClientes.xhtml">Registrar cliente</a></li>
+                                    <li><a href="Ingreso.xhtml">Ingreso</a></li>
+                                    <li><a>Ayuda</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </header>
+            </div>
+
+
+            <!--Main-->
+            <div class="container" id="Home" style="margin-bottom: 30px; width:30%;" >
+                <center>
+                    <section class="main" >
+
+                        <h:form>
+                            <h3>Ingreso</h3>
+                            <div class="table-responsive">
+                                <table>
+                                    <tr>
+                                        <td style="padding: 0.5em; padding-right: 1em;"><label>Usuario:</label></td>
+                                        <td><h:inputText class="input-sm" value="#{beanIngreso.usuario}"></h:inputText></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 0.5em; padding-right: 1em;"><label>Contraseña:</label></td>
+                                        <td><h:inputSecret class="input-sm" value="#{beanIngreso.contrasenna}"></h:inputSecret></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 0.5em; padding-right: 1em;"><label>Role:</label></td>
+                                        <td>
+                                                <!--<h:selectOneMenu>
+                                                    <f:selectItem itemValue="Administrador"></f:selectItem>
+                                                    <f:selectItem itemValue="Despacho"></f:selectItem>
+                                                    <f:selectItem itemValue="Facturacion"></f:selectItem>
+                                                </h:selectOneMenu>-->
+                                                <h:selectOneMenu label="rol" value="#{beanIngreso.role}" id="rol">
+                                                    <f:selectItems value="#{beanIngreso.listaRoles}"/>
+                                                </h:selectOneMenu>  
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <h:commandButton value="Aceptar" style="margin-left :5px;" class="btn btn-success" action="#{beanIngreso.validarDatos()}"></h:commandButton>
+                            <h:commandButton value="Cancelar" style="margin-left :5px;" class="btn btn-danger" action="#{beanIngreso.limpiarDatos()}"></h:commandButton>
+                        </h:form>
+                    </section> 
+                    <h:outputLabel value="#{beanIngreso.mensaje}" style="color: black"></h:outputLabel>
+                </center>
+            </div>
+
+            <!--Pie de Página-->
+            <div class="container-fluid" style="margin-bottom:5px" >
+                <footer class="col-xs-12">
+                    <div id="pie">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <br />
+                                <p>
+                                    <a href="Principal">Inicio  |</a>
+                                    <a>Contactenos</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <p>Copyright &#169; Proyecto progra 5 (UTN 2020)</p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+
+            <script src="js/jquery-3.2.1.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+        </h:form>
+    </h:body>
+</html>
+
