@@ -2,6 +2,15 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/Franklin%20Fernandez/Desktop/proyectoProgramacion5/web/HtmlPages/Ingreso.xhtml</file>
+            <file>file:/C:/Users/Franklin%20Fernandez/Desktop/proyectoProgramacion5/web/HtmlPages/Principal.xhtml</file>
+            <file>file:/C:/Users/Franklin%20Fernandez/Desktop/proyectoProgramacion5/web/HtmlPages/Administrador.xhtml</file>
+            <file>file:/C:/Users/Franklin%20Fernandez/Desktop/proyectoProgramacion5/src/java/Model/Provincia.java</file>
+            <file>file:/C:/Users/Franklin%20Fernandez/Desktop/proyectoProgramacion5/src/java/Controlador/beanIngreso.java</file>
+            <file>file:/C:/Users/Franklin%20Fernandez/Desktop/proyectoProgramacion5/src/java/Model/ProvinciaDB.java</file>
+            <file>file:/C:/Users/Franklin%20Fernandez/Desktop/proyectoProgramacion5/web/HtmlPages/Facturacion.xhtml</file>
+            <file>file:/C:/Users/Franklin%20Fernandez/Desktop/proyectoProgramacion5/web/HtmlPages/Despacho.xhtml</file>
+        </group>
     </open-files>
 </project-private>

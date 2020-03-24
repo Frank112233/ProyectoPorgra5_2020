@@ -10,50 +10,55 @@ package Model;
  * @author Franklin Fernandez
  */
 public class Provincia {
-    float cod_provincia;
-    String dsc_corta_provincia;
-    String dsc_provincia;
-    float log_activo;
+    int PROVI_ID;
+    String DSC_PROVIN;
+    String DSC_CORTA_PROVIN;
+    int ESTADO_PROVIN;
     
-    public Provincia(float cod_provincia, String 
-            dsc_corta_provincia, 
-            String dsc_provincia, float log_activo) {
+    public Provincia(int provi_id, String dsc_provin, 
+            String dsc_corta_provin, int estado_provin) {
         
-        this.setCod_provincia(cod_provincia);
-        this.setDsc_corta_provincia(dsc_corta_provincia);
-        this.setDsc_provincia(dsc_provincia);
-        this.setLog_activo(log_activo);
+        this.setPROVI_ID(provi_id);
+        this.setDSC_PROVIN(dsc_provin);
+        this.setDSC_CORTA_PROVIN(dsc_corta_provin);
+        this.setESTADO_PROVIN(estado_provin);
+    }
+     public Provincia()  {
+        
     }
 
-    public float getCod_provincia() {
-        return cod_provincia;
+    public int getPROVI_ID() {
+        return PROVI_ID;
     }
 
-    public void setCod_provincia(float cod_provincia) {
-        this.cod_provincia = cod_provincia;
+    public void setPROVI_ID(int PROVI_ID) {
+        this.PROVI_ID = PROVI_ID;
     }
 
-    public String getDsc_corta_provincia() {
-        return dsc_corta_provincia;
+    public String getDSC_PROVIN() {
+        return DSC_PROVIN;
     }
 
-    public void setDsc_corta_provincia(String dsc_corta_provincia) {
-        this.dsc_corta_provincia = dsc_corta_provincia;
+    public void setDSC_PROVIN(String DSC_PROVIN) {
+        this.DSC_PROVIN = DSC_PROVIN;
     }
 
-    public String getDsc_provincia() {
-        return dsc_provincia;
+    public String getDSC_CORTA_PROVIN() {
+        return DSC_CORTA_PROVIN;
     }
 
-    public void setDsc_provincia(String dsc_provincia) {
-        this.dsc_provincia = dsc_provincia;
+    public void setDSC_CORTA_PROVIN(String DSC_CORTA_PROVIN) {
+        this.DSC_CORTA_PROVIN = DSC_CORTA_PROVIN;
     }
 
-    public float getLog_activo() {
-        return log_activo;
+    public int getESTADO_PROVIN() {
+        return ESTADO_PROVIN;
     }
 
-    public void setLog_activo(float log_activo) {
-        this.log_activo = log_activo;
+    public void setESTADO_PROVIN(int ESTADO_PROVIN) {
+        this.ESTADO_PROVIN = ESTADO_PROVIN;
     }
+     
 }
+
+  

@@ -33,10 +33,10 @@ public class beanRegistroClientes implements Serializable {
     private String primerApellido;
     private String segundoApellido;
 
-    float cod_provincia;
+    int cod_provincia;
     String dsc_corta_provincia;
     String dsc_provincia;
-    float log_activo;
+    int log_activo;
     LinkedList<SelectItem> listaPro = new LinkedList<>();
 
     public beanRegistroClientes() {
@@ -88,8 +88,8 @@ public class beanRegistroClientes implements Serializable {
                 iter.hasNext();) {
         
             Provincia pro = (Provincia) iter.next();
-            dscCortaProvincia=pro.getDsc_corta_provincia();
-            codigoProvincia=pro.getCod_provincia();
+            dscCortaProvincia=pro.getDSC_CORTA_PROVIN();
+            codigoProvincia=pro.getPROVI_ID();
             resultList.add(new SelectItem(codigoProvincia, 
                     dscCortaProvincia));
          }         
@@ -131,13 +131,24 @@ public class beanRegistroClientes implements Serializable {
         this.mensage = mensage;
     }
 
-    public float getCod_provincia() {
+    public int getCod_provincia() {
         return cod_provincia;
     }
 
-    public void setCod_provincia(float cod_provincia) {
+    public void setCod_provincia(int cod_provincia) {
         this.cod_provincia = cod_provincia;
     }
+
+    public int getLog_activo() {
+        return log_activo;
+    }
+
+    public void setLog_activo(int log_activo) {
+        this.log_activo = log_activo;
+    }
+
+    
+    
 
     public String getDsc_corta_provincia() {
         return dsc_corta_provincia;
@@ -155,14 +166,7 @@ public class beanRegistroClientes implements Serializable {
         this.dsc_provincia = dsc_provincia;
     }
 
-    public float getLog_activo() {
-        return log_activo;
-    }
-
-    public void setLog_activo(float log_activo) {
-        this.log_activo = log_activo;
-    }
-    
+   
     public String getHora() {
         return hora;
     }
