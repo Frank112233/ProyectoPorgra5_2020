@@ -52,6 +52,7 @@ public class beanIngreso implements Serializable {
                     break;
                 case 3:
                     pagina = "Facturacion.xhtml";
+                    //href="#{request.contextPath}//faces/consultaResultado.xhtml"
                     break;
                 default:
                 // code block

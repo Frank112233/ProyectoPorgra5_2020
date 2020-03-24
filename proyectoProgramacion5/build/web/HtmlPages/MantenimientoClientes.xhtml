@@ -44,10 +44,9 @@
                 </header>
             </div>
             <!--Main-->
-            <div class="container" id="MainDiv" style="margin-bottom: 30px; width: 50%;" >
+            <div class="container" id="MainDiv" style="margin-bottom: 30px; width: 70%;" >
                 <center>
                     <section class="main" >
-
                         <h3>Registro clientes</h3>
                         <div class="table-responsive">
                             <table border="0" class="table-responsive">
@@ -76,17 +75,17 @@
                                     <td><h:inputText class="input-sm" value="#{beanRegistroClientes.hora}"></h:inputText></td>
                                 </tr>
                             </table>
-                            <table>
+                            <table border="0">
                                 <tr>
-                                    <td><label>Dirección:</label></td>
-                                    <td>
+                                    <td style="padding: 0em; padding-right: 0.5em"><label>Dirección:</label></td>
+                                    <td style="padding: 0em; padding-right: 0.5em">
                                         <h:selectOneMenu label="Provincia" onchange="submit()" id="pro">
                                             <f:selectItem itemValue="San jose"></f:selectItem>
                                             <f:selectItem itemValue="Alajuela"></f:selectItem>
                                             <f:selectItem itemValue="Heredia"></f:selectItem>
                                         </h:selectOneMenu>
                                     </td>
-                                    <td>
+                                    <td style="padding: 0em; padding-right: 0.5em">
                                         <h:selectOneMenu label="Canton" onchange="submit()" id="canton">
                                             <!--<f:selectItems id="cantonItems" class="input-sm"></f:selectItems>-->
                                             <f:selectItem itemValue="San Ramon"></f:selectItem>
@@ -94,7 +93,7 @@
                                             <f:selectItem itemValue="Palmares"></f:selectItem>
                                         </h:selectOneMenu>
                                     </td>
-                                    <td>
+                                    <td style="padding: 0em; padding-right: 0.5em">
                                         <h:selectOneMenu label="Distrito" onchange="submit()" id="distrito">
                                             <!--<f:selectItems class="input-sm"></f:selectItems>-->
                                             <f:selectItem itemValue="Piedades Norte"></f:selectItem>
@@ -105,15 +104,15 @@
                                     <td><label>Otras señas:</label><h:inputText class="input-sm"></h:inputText></td>
                                 </tr>
                                 <tr>
-                                    <td><label>Otra direccion:</label></td>
-                                    <td>
+                                    <td style="padding: 0em; padding-right: 0.5em"><label>Otra direccion:</label></td>
+                                    <td style="padding: 0em; padding-right: 0.5em">
                                         <h:selectOneMenu label="Provincia" onchange="submit()" id="pro2">
                                             <f:selectItem itemValue="San jose"></f:selectItem>
                                             <f:selectItem itemValue="Alajuela"></f:selectItem>
                                             <f:selectItem itemValue="Heredia"></f:selectItem>
                                         </h:selectOneMenu>
                                     </td>
-                                    <td>
+                                    <td style="padding: 0em; padding-right: 0.5em">
                                         <h:selectOneMenu label="Canton" onchange="submit()" id="canton2">
                                             <!--<f:selectItems id="cantonItems" class="input-sm"></f:selectItems>-->
                                             <f:selectItem itemValue="San Ramon"></f:selectItem>
@@ -121,7 +120,7 @@
                                             <f:selectItem itemValue="Palmares"></f:selectItem>
                                         </h:selectOneMenu>
                                     </td>
-                                    <td>
+                                    <td style="padding: 0em; padding-right: 0.5em">
                                         <h:selectOneMenu label="Distrito" onchange="submit()" id="distrito3">
                                             <!--<f:selectItems class="input-sm"></f:selectItems>-->
                                             <f:selectItem itemValue="Piedades Norte"></f:selectItem>
@@ -139,9 +138,7 @@
                         <h:commandButton value="Guardar" style="margin-left :5px;" class="btn btn-primary" action="#{beanRegistroClientes.validarDatos()}"></h:commandButton>
                         <h:commandButton value="Buscar" style="margin-left :5px;" class="btn btn-primary"></h:commandButton>
                         <h:commandButton value="Editar" style="margin-left :5px;" class="btn btn-primary"></h:commandButton>
-                        <!--<<h:commandButton value="Aceptar" style="margin-left :5px;" class="btn btn-success"></h:commandButton>-->
                         <h:commandButton value="Salir" style="margin-left :5px;" class="btn btn-danger" action="Ingreso.xhtml"></h:commandButton>
-
 
                     </section>
                     <h:outputLabel value="#{beanRegistroClientes.mensage}" style="color: black"></h:outputLabel>

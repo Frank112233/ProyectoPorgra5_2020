@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Registro productos</title>
         <meta charset="utf-8" />
@@ -43,8 +44,53 @@
             <!--Main-->
             <div class="container" id="MainDiv" style="margin-bottom: 30px; width: 50%;" >
                 <center>
-                    
                     <h:outputLabel value="Registro productos" style="color: black"></h:outputLabel>
+                    <section class="main" >
+                        <div class="table-responsive">
+                            <table border="0" class="table-responsive">
+                                <tr>
+                                    <td> <label>Id del producto:</label></td>
+                                    <td><h:inputText class="input-sm" value="#{beanMantProductos.producto_id}" disabled="True"></h:inputText></td>
+                                </tr>
+                                <tr>
+                                    <td><label>Nombre:</label></td>
+                                    <td><h:inputText class="input-sm" value="#{beanMantProductos.producto_nombre}" ></h:inputText></td>
+                                </tr>
+                                <tr>
+                                    <td><label>Imagen:</label></td>
+                                    <td><h:inputText class="input-sm" value="#{beanMantProductos.producto_imagen}" ></h:inputText></td>
+                                </tr>
+                                <tr>
+                                    <td><label>Descripcion:</label></td>
+                                    <td><h:inputText class="input-sm" value="#{beanMantProductos.producto_descripcion}" ></h:inputText></td>
+                                </tr>
+                                <tr>
+                                    <td><label>Estado:</label></td>
+                                    <td>
+                                        <h:selectOneMenu label="Estado" onchange="submit()" id="estado">
+                                            <f:selectItem itemValue="Activo"></f:selectItem>
+                                             <f:selectItem itemValue="Inactivo"></f:selectItem>
+                                        </h:selectOneMenu>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><label>Precio:</label></td>
+                                    <td><h:inputText class="input-sm" value="#{beanMantProductos.producto_precio}"></h:inputText></td>
+                                </tr>
+                                <tr>
+                                    <td><label>Cantidad:</label></td>
+                                    <td><h:inputText class="input-sm" value="#{beanMantProductos.producto_cantidad}"></h:inputText></td>
+                                </tr>
+                            </table>
+                        </div><br></br>
+
+                        <h:commandButton value="Nuevo" class="btn btn-primary" action="#{beanMantProductos.limpiarProducto()}"></h:commandButton>
+                        <h:commandButton value="Guardar" style="margin-left :5px;" class="btn btn-primary" action="#{beanMantProductos.validarDatos()}"></h:commandButton>
+                        <h:commandButton value="Buscar" style="margin-left :5px;" class="btn btn-primary"></h:commandButton>
+                        <h:commandButton value="Editar" style="margin-left :5px;" class="btn btn-primary"></h:commandButton>
+                        <h:commandButton value="Salir" style="margin-left :5px;" class="btn btn-danger" action="Ingreso.xhtml"></h:commandButton>
+                    </section>
+
                 </center>
             </div>
 
